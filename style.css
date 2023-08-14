@@ -1,0 +1,129 @@
+@font-face {
+    font-family: "Roboto-Bold";
+    src: url(assets/fonts/Roboto-Bold.ttf);
+}
+
+@font-face {
+    font-family: "Roboto-Regular";
+    src: url(assets/fonts/Roboto-Regular.ttf);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: hsl(235, 18%, 26%);
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    padding: 15px;
+    display: flex;
+    border-radius: 20px;
+    background-color: white;
+    margin: auto;
+    width: 85%;
+    font-family: Roboto-Regular;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
+    justify-content: center;
+    gap: 20px;
+    font-weight: 400;
+}
+
+h1 {
+    color: hsl(234, 29%, 20%);
+    font-family: Roboto-Bold;
+    font-weight: 700;
+    font-size: 56px;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+#list-content {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+}
+
+.list img {
+    width: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    font-weight: 700;
+}
+
+.email {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.email input {
+    width: 99%;
+    padding: 15px;
+    border: solid hsl(231, 7%, 60%);
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+
+button {
+    background-color: hsl(234, 29%, 20%);
+    color: white;
+    width: 100%;
+    border-radius: 10px;
+    padding: 15px;
+    cursor: pointer;
+    border: none;
+}
+
+button:hover {
+    background-image: linear-gradient(to right, hsl(346, 90%, 70%),hsl(4, 100%, 67%));
+    box-shadow: 5px 5px 20px 2px hsla(4, 100%, 67%, 0.5);
+}
+
+button, p, .list {
+    font-size: 16px;
+}
+
+.image-right img{
+    width: 100%;
+    height: 100%;
+}
+
+/* styles to turn the input box red on error */
+.email {
+    position: relative;
+}
+
+.email.error input {
+    border: 2px solid hsl(4, 100%, 67%);
+    background-color: hsla(4, 100%, 67%, 0.15);
+}
+
+/* Position the error message on the top right side of the box */
+.email.error #result {
+    color: hsl(4, 100%, 67%);
+    position: absolute;
+    top: 0;
+    right: 0;
+}
